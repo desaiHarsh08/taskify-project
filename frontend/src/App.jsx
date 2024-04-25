@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import { RouterProvider, createBrowserRouter, createHashRouter } from 'react-router-dom'
 import Root from './pages/Root';
 import Home from './pages/home/Home';
 import DefaultHome from './pages/home/home-routes/DefaultHome';
@@ -13,7 +13,7 @@ import AddClient from './pages/home/home-routes/add-clients/AddClient';
 import Settings from './pages/home/home-routes/settings/Settings';
 
 const App = () => {
-    const router = createBrowserRouter([
+    const router = createHashRouter([
         { path: "/", element: <Root /> },
         { 
             path: "/home", 
