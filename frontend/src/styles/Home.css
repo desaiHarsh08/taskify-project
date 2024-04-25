@@ -1,0 +1,44 @@
+#home-main {
+    height: calc(100vh - 56px);
+}
+
+#home-main #shared-area {
+    width: calc(100vw - 225px);
+    height: calc(100vh - 56px);
+}
+
+#client-timeline {
+    height: calc(100% - 57px);
+}
+
+#default-clients-list-container #list-container{
+    height: calc(100% - 43.5px);
+}
+
+#add-client-form {
+    height: calc(100% - 81px);
+}
+
+#default-home-activity {
+    height: calc(100% - 304px);
+}
+
+#task-container {
+    height: calc(100% - 121px);
+    overflow: auto;
+}
+
+@media (max-width: 767px) {
+    #home-main #shared-area {
+        width: 100%;
+    }
+    #default-clients-list-container #list-container{
+        height: calc(95% - 43.5px);
+    }
+    #add-client-form {
+        height: auto;
+    }
+    #client-timeline {
+        height: auto;
+    }
+}
