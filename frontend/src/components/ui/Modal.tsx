@@ -23,8 +23,6 @@ const Modal = ({
   centered = false,
   backdrop = false,
   size = "sm",
-  addtionalBtnName = "",
-  addtionalBtnVisibility = false
 }: ModalProps) => {
   return (
     <RBS_Modal

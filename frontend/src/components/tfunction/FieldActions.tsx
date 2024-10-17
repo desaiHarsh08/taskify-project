@@ -1,7 +1,6 @@
 import { FaEye } from "react-icons/fa";
 
 import Button from "../ui/Button";
-import { MdOutlineDeleteOutline } from "react-icons/md";
 import { IoIosCheckmarkCircleOutline } from "react-icons/io";
 import Modal from "../ui/Modal";
 import { useState } from "react";
