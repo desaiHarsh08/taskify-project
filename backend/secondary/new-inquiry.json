@@ -1,0 +1,532 @@
+{
+    "taskType": "NEW_PUMP_INQUIRY",
+    "functionPrototypes": [
+        {
+            "title": "Prepare Quotation",
+            "description": "Drafting a quotation based on the provided client details and requirements.",
+            "department": "QUOTATION",
+            "choice": false,
+            "fieldPrototypes": [
+             {
+               "title": "Pump Details (Depending on the type there are multiple templates)",
+               "description": "Recording pump specifications, with various templates tailored to different types.",
+               "columnPrototypes": [
+                 {
+                   "name": "Requirement Details",
+                   "columnType": "STRING",
+                   "largeText": true,
+                   "multipleFiles": false
+                 },
+                 {
+                   "name": "Upload Quotation",
+                   "columnType": "FILE",
+                   "largeText": false,
+                   "multipleFiles": true
+                 }
+               ]
+             }
+            ]
+         },
+        {
+            "title": "Follow-Up with Customer ",
+            "description": "Initiating a follow-up process for a newly generated quotation to ensure timely response and address any inquiries or feedback.",
+            "department": "QUOTATION",
+            "choice": false,
+            "fieldPrototypes": [
+                {
+                    "title": "Notes",
+                    "description": "Add notes, if any.",
+                    "columnPrototypes": [
+                        {
+                            "name": "Notes",
+                            "columnType": "STRING",
+                            "largeText": true,
+                            "multipleFiles": false
+                        }
+                    ]
+                },
+                {
+                    "title": "Next follow-Up date",
+                    "description": "Scheduling the next follow-up date to ensure continued communication and progress tracking.",
+                    "columnPrototypes": [
+                        {
+                            "name": "Date",
+                            "columnType": "DATE",
+                            "largeText": false,
+                            "multipleFiles": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Check with Principal for Requirements",
+            "description": "Verifying with the principal to confirm the project's specific requirements or specifications.",
+            "department": "QUOTATION",
+            "choice": false,
+            "fieldPrototypes": [
+                {
+                    "title": "Send Requirements",
+                    "description": "Forwarding the requirements to the designated recipient for further action or review.",
+                    "columnPrototypes": [
+                        {
+                            "name": "Principal Name",
+                            "columnType": "STRING",
+                            "largeText": false,
+                            "multipleFiles": false
+                        },
+                        {
+                            "name": "Principal Email",
+                            "columnType": "STRING",
+                            "largeText": false,
+                            "multipleFiles": false
+                        },
+                        {
+                            "name": "Details Sent",
+                            "columnType": "STRING",
+                            "largeText": true,
+                            "multipleFiles": false
+                        },
+                        {
+                            "name": "Requirements File",
+                            "columnType": "FILE",
+                            "largeText": false,
+                            "multipleFiles": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Follow-Up with Principal",
+            "description": "Initiating a follow-up with the principal to confirm or clarify any outstanding requirements for the project.",
+            "department": "QUOTATION",
+            "choice": false,
+            "fieldPrototypes": [
+                {
+                    "title": "Notes",
+                    "description": "Add notes, if any.",
+                    "columnPrototypes": [
+                        {
+                            "name": "Notes",
+                            "columnType": "STRING",
+                            "largeText": true,
+                            "multipleFiles": false
+                        }
+                    ]
+                },
+                {
+                    "title": "Next follow-Up date",
+                    "description": "Scheduling the next follow-up date to ensure continued communication and progress tracking.",
+                    "columnPrototypes": [
+                        {
+                            "name": "Date",
+                            "columnType": "DATE",
+                            "largeText": false,
+                            "multipleFiles": false
+                        }
+                    ]
+                },
+                {
+                    "title": "Attach files (Follow-Up with Principal)",
+                    "description": "Attach files the files if any",
+                    "columnPrototypes": [
+                        {
+                            "name": "Upload File(s)",
+                            "columnType": "FILE",
+                            "largeText": false,
+                            "multipleFiles": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Verify Purchase Order",
+            "description": "Confirming the accuracy and validity of the purchase order against the agreed-upon terms and specifications.",
+            "department": "QUOTATION",
+            "choice": false,
+            "fieldPrototypes": [
+                {
+                    "title": "Confirmation for Purchase Order",
+                    "description": "Is all okay?",
+                    "columnPrototypes": [
+                        {
+                            "name": "Okay",
+                            "columnType": "BOOLEAN",
+                            "largeText": false,
+                            "multipleFiles": false
+                        },
+                        {
+                            "name": "Notes",
+                            "columnType": "STRING",
+                            "largeText": true,
+                            "multipleFiles": false
+                        }
+                    ]
+                },
+                {
+                    "title": "Request for amendment on Purchase Order",
+                    "description": "Submitting a request for changes or amendments to be made on the existing purchase order to align with updated requirements or specifications.",
+                    "columnPrototypes": [
+                        {
+                            "name": "Okay",
+                            "columnType": "BOOLEAN",
+                            "largeText": false,
+                            "multipleFiles": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Check in Stock",
+            "description": "Verifying the availability of items in the stock inventory to fulfill a request or order.",
+            "department": "QUOTATION",
+            "choice": false,
+            "fieldPrototypes": [
+                {
+                    "title": "Availability",
+                    "description": "Does the items are sufficient for completing the order?",
+                    "columnPrototypes": [
+                        {
+                            "name": "Sufficient",
+                            "columnType": "BOOLEAN",
+                            "largeText": false,
+                            "multipleFiles": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Prepare Advance Payment Proforma Invoice",
+            "description": "Creating a proforma invoice requesting advance payment for goods or services prior to their delivery or completion.",
+            "department": "QUOTATION",
+            "choice": false,
+            "fieldPrototypes": [
+                {
+                    "title": "Send to Customer (Advance Payment Proforma Invoice)",
+                    "description": "Send to Customer",
+                    "columnPrototypes": [
+                        {
+                            "name": "Advance Payment Proforma Invoice (Customer)",
+                            "columnType": "FILE",
+                            "largeText": false,
+                            "multipleFiles": false,
+                            "notifyCustomer": true
+                        }
+                    ]
+                },
+                {
+                    "title": "Send to Accounts",
+                    "description": "Send to Accounts",
+                    "columnPrototypes": [
+                        {
+                            "name": "Advance Payment Proforma Invoice (Accounts)",
+                            "columnType": "FILE",
+                            "largeText": false,
+                            "multipleFiles": false,
+                            "notifyCustomer": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Confirm Advance Payment Received",
+            "description": "Verifying the reception of the advance payment and confirming its receipt in the accounts records.",
+            "department": "ACCOUNTS",
+            "choice": false,
+            "fieldPrototypes": [
+                {
+                    "title": "Confirmation",
+                    "description": "Is Advance Payment Received?",
+                    "columnPrototypes": [
+                        {
+                            "name": "Advance Payment Receipt",
+                            "columnType": "FILE",
+                            "largeText": false,
+                            "multipleFiles": false
+                        },
+                        {
+                            "name": "Received",
+                            "columnType": "BOOLEAN",
+                            "largeText": false,
+                            "multipleFiles": false,
+                            "notifyCustomer": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Follow-Up on Payments",
+            "description": "Initiating a follow-up procedure to inquire about the status of pending payments and ensure timely resolution.",
+            "department": "ACCOUNTS",
+            "choice": false,
+            "fieldPrototypes": [
+                {
+                    "title": "Notes",
+                    "description": "Add notes, if any.",
+                    "columnPrototypes": [
+                        {
+                            "name": "Notes",
+                            "columnType": "STRING",
+                            "largeText": true,
+                            "multipleFiles": false
+                        }
+                    ]
+                },
+                {
+                    "title": "Next follow-Up date",
+                    "description": "Scheduling the next follow-up date to ensure continued communication and progress tracking.",
+                    "columnPrototypes": [
+                        {
+                            "name": "Date",
+                            "columnType": "DATE",
+                            "largeText": false,
+                            "multipleFiles": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Place order to Principal",
+            "description": "Initiating the process of placing an order with the principal supplier or vendor for the required goods or services.",
+            "department": "QUOTATION",
+            "choice": false,
+            "fieldPrototypes": [
+                {
+                    "title": "Order Number from Principal ",
+                    "description": "Requesting the order number from the principal supplier or vendor for reference and tracking purposes.",
+                    "columnPrototypes": [
+                        {
+                            "name": "Make",
+                            "columnType": "STRING",
+                            "largeText": false,
+                            "multipleFiles": false
+                        },
+                        {
+                            "name": "Model",
+                            "columnType": "STRING",
+                            "largeText": false,
+                            "multipleFiles": false
+                        },
+                        {
+                            "name": "Quantity",
+                            "columnType": "NUMBER",
+                            "largeText": false,
+                            "multipleFiles": false
+                        },
+                        {
+                            "name": "Order No.",
+                            "columnType": "STRING",
+                            "largeText": false,
+                            "multipleFiles": false
+                        },
+                        {
+                            "name": "Other Pump Specifications",
+                            "columnType": "FILE",
+                            "largeText": false,
+                            "multipleFiles": false
+                        }
+                    ]
+                },
+                {
+                    "title": "Estimated date of delivery ",
+                    "description": "Estimated date of delivery ",
+                    "columnPrototypes": [
+                        {
+                            "name": "Date",
+                            "columnType": "DATE",
+                            "largeText": false,
+                            "multipleFiles": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Prepare Gaurantee Card and Testing Certificate",
+            "description": "Creating the guarantee card and testing certificate to certify the quality and performance of the product, ensuring customer satisfaction and compliance with industry standards.",
+            "department": "QUOTATION",
+            "choice": false,
+            "fieldPrototypes": [
+                {
+                    "title": "Attach files",
+                    "description": "Attach files",
+                    "columnPrototypes": [
+                        {
+                            "name": "Gaurantee Card and Testing Certificate",
+                            "columnType": "FILE",
+                            "largeText": false,
+                            "multipleFiles": false
+                        },
+                        {
+                            "name": "Performance Curves",
+                            "columnType": "FILE",
+                            "largeText": false,
+                            "multipleFiles": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Follow-Up with Principal for Placed order",
+            "description": "Initiating a follow-up with the principal supplier to confirm the status of the placed order and ensure timely processing and delivery.",
+            "department": "QUOTATION",
+            "choice": false,
+            "fieldPrototypes": [
+                {
+                    "title": "Notes",
+                    "description": "Add notes, if any.",
+                    "columnPrototypes": [
+                        {
+                            "name": "Notes",
+                            "columnType": "STRING",
+                            "largeText": true,
+                            "multipleFiles": false
+                            
+                        }
+                    ]
+                },
+                {
+                    "title": "Next follow-Up date",
+                    "description": "Scheduling the next follow-up date to ensure continued communication and progress tracking.",
+                    "columnPrototypes": [
+                        {
+                            "name": "Date",
+                            "columnType": "DATE",
+                            "largeText": false,
+                            "multipleFiles": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Prepare Proforma Invoice",
+            "description": "Generating a proforma invoice detailing the cost of goods or services prior to their delivery or completion, often used for customs or preliminary payment purposes.",
+            "department": "QUOTATION",
+            "choice": false,
+            "fieldPrototypes": [
+                {
+                    "title": "Send to Customer (Proforma Invoice)",
+                    "description": "Send to Customer",
+                    "columnPrototypes": [
+                        {
+                            "name": "Attach Proforma Invoice (Customer)",
+                            "columnType": "FILE",
+                            "largeText": false,
+                            "multipleFiles": false,
+                            "notifyCustomer": true
+                        }
+                    ]
+                },
+                {
+                    "title": "Send to Accounts",
+                    "description": "Send to Accounts",
+                    "columnPrototypes": [
+                        {
+                            "name": "Attach Proforma Invoice (Accounts)",
+                            "columnType": "FILE",
+                            "largeText": false,
+                            "multipleFiles": false,
+                            "notifyCustomer": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Confirm Payment Received",
+            "description": "Verifying the reception of the payment and confirming its receipt in the accounts records.",
+            "department": "ACCOUNTS",
+            "choice": false,
+            "fieldPrototypes": [
+                {
+                    "title": "Confirmation (Payment Received)",
+                    "description": "Is Payment Received?",
+                    "columnPrototypes": [
+                        {
+                            "name": "Payment Receipt",
+                            "columnType": "FILE",
+                            "largeText": false,
+                            "multipleFiles": false
+                        },
+                        {
+                            "name": "Received",
+                            "columnType": "BOOLEAN",
+                            "largeText": false,
+                            "multipleFiles": false,
+                            "notifyCustomer": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Create Challan",
+            "description": "Generating a challan document to accompany goods being transported, providing details such as quantity, description, and destination for regulatory or tracking purposes.",
+            "department": "DISPATCH",
+            "choice": false,
+            "fieldPrototypes": [
+                {
+                    "title": "Driver Name, Vehicle Number, Estimated Time and Date of delivery",
+                    "description": "Driver Name, Vehicle Number, Estimated Time and Date of delivery",
+                    "columnPrototypes": [
+                        {
+                            "name": "Driver Name",
+                            "columnType": "STRING",
+                            "largeText": false,
+                            "multipleFiles": false
+                        },
+                        {
+                            "name": "Vehicle Number",
+                            "columnType": "STRING",
+                            "largeText": false,
+                            "multipleFiles": false
+                        },
+                        {
+                            "name": "Delivery Date",
+                            "columnType": "DATE",
+                            "largeText": false,
+                            "multipleFiles": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Inform Customer",
+            "description": "Informing the customer about the assigned driver, vehicle details, and estimated time and date of delivery for their awareness and convenience.",
+            "department": "DISPATCH",
+            "choice": false,
+            "fieldPrototypes": [
+                {
+                    "title": "Inform Customer",
+                    "description": "Inform Customer",
+                    "columnPrototypes": [
+                        {
+                            "name": "Done",
+                            "columnType": "BOOLEAN",
+                            "largeText": false,
+                            "multipleFiles": false,
+                            "notifyCustomer": true
+                        },
+                        {
+                            "name": "Date",
+                            "columnType": "DATE",
+                            "largeText": false,
+                            "multipleFiles": false,
+                            "notifyCustomer": true
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
